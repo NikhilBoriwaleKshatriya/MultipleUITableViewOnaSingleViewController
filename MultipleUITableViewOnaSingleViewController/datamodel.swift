@@ -13,19 +13,23 @@ struct MumbaiModel {
     let img :UIImage?
     let title: String?
     let city:String?
+    let Description:String?
 }
 struct PuneModel {
     let img :UIImage?
     let title: String?
     let city:String?
+    let Description:String?
 }
 struct NandedModel {
     let img :UIImage?
     let title: String?
     let city:String?
+    let Description:String?
 }
 struct NashikModel {
     let img :UIImage?
     let title: String?
     let city:String?
+    let Description:String?
 }

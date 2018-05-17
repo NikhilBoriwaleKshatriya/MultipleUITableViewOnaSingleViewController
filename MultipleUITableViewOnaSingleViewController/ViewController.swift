@@ -28,20 +28,20 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         mytable.backgroundColor = UIColor.groupTableViewBackground
         MumbaiData  = [
-            MumbaiModel (img: #imageLiteral(resourceName: "a2-1"), title: "navratri", city: "mumbai"),
-        MumbaiModel(img: #imageLiteral(resourceName: "p5-1"), title: "navratri", city: "mumbai"),
-        MumbaiModel(img: #imageLiteral(resourceName: "p1-1"), title: "navratri", city: "mumbai"),
-        MumbaiModel(img: #imageLiteral(resourceName: "a5-1"), title: "navratri", city: "mumbai"),
-        MumbaiModel(img: #imageLiteral(resourceName: "b2-1"), title: "navratri", city: "mumbai"),
-        MumbaiModel(img: #imageLiteral(resourceName: "m5-1"), title: "navratri", city: "mumbai")
+            MumbaiModel (img: #imageLiteral(resourceName: "a2-1"), title: "M1", city: "mumbai", Description: "Mumbai1 is Good"),
+        MumbaiModel(img: #imageLiteral(resourceName: "p5-1"), title: "M2", city: "mumbai",Description: "Mumbai2 is Good"),
+        MumbaiModel(img: #imageLiteral(resourceName: "p1-1"), title: "M3", city: "mumbai",Description: "Mumbai3 is Good"),
+        MumbaiModel(img: #imageLiteral(resourceName: "a5-1"), title: "M4", city: "mumbai",Description: "Mumbai4 is Good"),
+        MumbaiModel(img: #imageLiteral(resourceName: "b2-1"), title: "M5", city: "mumbai",Description: "Mumbai5 is Good"),
+        MumbaiModel(img: #imageLiteral(resourceName: "m5-1"), title: "M6", city: "mumbai",Description: "Mumbai6 is Good")
         ]
-        puneData = [PuneModel(img: #imageLiteral(resourceName: "p2-1"), title: "navratri", city: "Pune"),
-                    PuneModel(img: #imageLiteral(resourceName: "b2-1"), title: "navratri", city: "Pune"),
-                    PuneModel(img: #imageLiteral(resourceName: "p1-1"), title: "navratri", city: "Pune")]
+        puneData = [PuneModel(img: #imageLiteral(resourceName: "p2-1"), title: "P1", city: "Pune",Description: "pune1 is Good"),
+                    PuneModel(img: #imageLiteral(resourceName: "b2-1"), title: "P2", city: "Pune",Description: "pune2 is Good"),
+                    PuneModel(img: #imageLiteral(resourceName: "p1-1"), title: "P3", city: "Pune",Description: "pune3 is Good")]
         
-        NashikData = [NashikModel(img: #imageLiteral(resourceName: "p2-1"), title: "navratri", city: "NAshik"),NashikModel(img: #imageLiteral(resourceName: "b5-1"), title: "navratri", city: "NAshik"),NashikModel(img: #imageLiteral(resourceName: "b2-1"), title: "navratri", city: "NAshik")]
+        NashikData = [NashikModel(img: #imageLiteral(resourceName: "p2-1"), title: "N1", city: "NAshik",Description: "NAshik1 is Good"),NashikModel(img: #imageLiteral(resourceName: "b5-1"), title: "N2", city: "NAshik",Description: "NAshik2 is Good"),NashikModel(img: #imageLiteral(resourceName: "b2-1"), title: "N3", city: "NAshik",Description: "NAshik3 is Good")]
 
-        NandedData = [NandedModel(img: #imageLiteral(resourceName: "m4-1"), title: "navratri", city: "Nanded"),NandedModel(img: #imageLiteral(resourceName: "b5-1"), title: "navratri", city: "Nanded"),NandedModel(img: #imageLiteral(resourceName: "b1-1"), title: "navratri", city: "Nanded")]
+        NandedData = [NandedModel(img: #imageLiteral(resourceName: "m4-1"), title: "na1", city: "Nanded",Description: "Nanded1 is Good"),NandedModel(img: #imageLiteral(resourceName: "b5-1"), title: "n2", city: "Nanded",Description: "Nanded2 is Good"),NandedModel(img: #imageLiteral(resourceName: "b1-1"), title: "na3", city: "Nanded",Description: "Nanded3 is Good")]
         
         
     }
@@ -93,7 +93,39 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         let passingdata : DetailViewVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewVC")
             as! DetailViewVC
         
+        switch segmentoutlet.selectedSegmentIndex{
+        case 0:
+            passingdata.stringcity = puneData[indexPath.row].city
+            passingdata.stringname = puneData[indexPath.row].title
+            passingdata.stringdescription = puneData[indexPath.row].Description
+            passingdata.Stringimage =  puneData[indexPath.row].img
+            break
+        case 1:
+            passingdata.stringcity = NandedData[indexPath.row].city
+            passingdata.stringname = NandedData[indexPath.row].title
+            passingdata.stringdescription = NandedData[indexPath.row].Description
+           passingdata.Stringimage =  NandedData[indexPath.row].img
+            break
+        case 2:
+            passingdata.stringcity = MumbaiData[indexPath.row].city
+            passingdata.stringname = MumbaiData[indexPath.row].title
+            passingdata.stringdescription = MumbaiData[indexPath.row].Description
+           passingdata.Stringimage =  MumbaiData[indexPath.row].img
+            break
+        case 3:
+            passingdata.stringcity = NashikData[indexPath.row].city
+            passingdata.stringname = NashikData[indexPath.row].title
+            passingdata.stringdescription = NashikData[indexPath.row].Description
+            passingdata.Stringimage =  NashikData[indexPath.row].img
+            
+            
+            break
+        default:
+            break
+        }
         
+       
+      
         self.navigationController?.pushViewController(passingdata, animated: true)
  
         
