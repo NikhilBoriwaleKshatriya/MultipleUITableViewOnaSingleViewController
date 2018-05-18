@@ -17,7 +17,6 @@
 		F1A24A6E20AB0B9F0051743D /* datamodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A24A6D20AB0B9F0051743D /* datamodel.swift */; };
 		F1A24A7020AB0EA60051743D /* mytablecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A24A6F20AB0EA60051743D /* mytablecell.swift */; };
 		F1A24A7220AC053A0051743D /* DetailViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A24A7120AC05390051743D /* DetailViewVC.swift */; };
-		F1A24AB220AC653F0051743D /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A24AB120AC653F0051743D /* UPCarouselFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		F1A24A6D20AB0B9F0051743D /* datamodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datamodel.swift; sourceTree = "<group>"; };
 		F1A24A6F20AB0EA60051743D /* mytablecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mytablecell.swift; sourceTree = "<group>"; };
 		F1A24A7120AC05390051743D /* DetailViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewVC.swift; sourceTree = "<group>"; };
-		F1A24AB120AC653F0051743D /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				F1A24A3F20AAEC760051743D /* AppDelegate.swift */,
-				F1A24AB120AC653F0051743D /* UPCarouselFlowLayout.swift */,
 				F1A24A4120AAEC760051743D /* ViewController.swift */,
 				F1A24A7120AC05390051743D /* DetailViewVC.swift */,
 				F1A24A6D20AB0B9F0051743D /* datamodel.swift */,
@@ -273,7 +270,6 @@
 			files = (
 				F1A24A6E20AB0B9F0051743D /* datamodel.swift in Sources */,
 				F1A24A4220AAEC760051743D /* ViewController.swift in Sources */,
-				F1A24AB220AC653F0051743D /* UPCarouselFlowLayout.swift in Sources */,
 				F1A24A7220AC053A0051743D /* DetailViewVC.swift in Sources */,
 				F1A24A7020AB0EA60051743D /* mytablecell.swift in Sources */,
 				F1A24A4020AAEC760051743D /* AppDelegate.swift in Sources */,

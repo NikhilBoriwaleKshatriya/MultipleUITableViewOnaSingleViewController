@@ -95,28 +95,18 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         
         switch segmentoutlet.selectedSegmentIndex{
         case 0:
-            passingdata.stringcity = puneData[indexPath.row].city
-            passingdata.stringname = puneData[indexPath.row].title
-            passingdata.stringdescription = puneData[indexPath.row].Description
-            passingdata.Stringimage =  puneData[indexPath.row].img
+           passingdata.pudata = puneData[indexPath.row]
             break
         case 1:
-            passingdata.stringcity = NandedData[indexPath.row].city
-            passingdata.stringname = NandedData[indexPath.row].title
-            passingdata.stringdescription = NandedData[indexPath.row].Description
-           passingdata.Stringimage =  NandedData[indexPath.row].img
-            break
+            passingdata.nanddata = NandedData[indexPath.row]
+            
+           break
         case 2:
-            passingdata.stringcity = MumbaiData[indexPath.row].city
-            passingdata.stringname = MumbaiData[indexPath.row].title
-            passingdata.stringdescription = MumbaiData[indexPath.row].Description
-           passingdata.Stringimage =  MumbaiData[indexPath.row].img
-            break
+            passingdata.mudata = MumbaiData[indexPath.row]
+            
+             break
         case 3:
-            passingdata.stringcity = NashikData[indexPath.row].city
-            passingdata.stringname = NashikData[indexPath.row].title
-            passingdata.stringdescription = NashikData[indexPath.row].Description
-            passingdata.Stringimage =  NashikData[indexPath.row].img
+            passingdata.nashdata = NashikData[indexPath.row]
             
             
             break
